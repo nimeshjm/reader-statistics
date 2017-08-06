@@ -33,7 +33,7 @@ namespace ReaderStatistics.Domain.Publication
                             return new PublicationAuthors
                                        {
                                            NumberOfViews = a.Count(),
-                                           Publication = publication,
+                                           Name = publication.Name,
                                            Authors = publication.AuthorIds.Select(_authorRepository.GetById)
                                        };
                         })

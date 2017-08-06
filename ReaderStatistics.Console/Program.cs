@@ -4,7 +4,6 @@ using System.Reflection;
 using ReaderStatistics.Console.ViewModels;
 using ReaderStatistics.Domain.Publication;
 using ReaderStatistics.Domain.User;
-using ReaderStatistics.Domain.User.Entity;
 using ReaderStatistics.Persistence.Repositories;
 
 namespace ReaderStatistics.Console
@@ -30,7 +29,7 @@ namespace ReaderStatistics.Console
 
             var userService = new UserService(new AccessLogSequentialFileReadRepository(), new UserMemoryRepository());
             var views2 = userService.FindTopUsersByPublicationAccess();
-            var vm2 = Mapper.Map<IEnumerable<ViewModels.UserAccess>>(views2);
+            var vm2 = Mapper.Map<IEnumerable<UserAccess>>(views2);
             foreach (var users in vm2)
             {
                 System.Console.WriteLine($"name: {users.Name}, publications: {users.NumberOfViews}");

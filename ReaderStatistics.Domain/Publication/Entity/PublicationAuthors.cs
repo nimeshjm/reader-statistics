@@ -4,7 +4,7 @@ namespace ReaderStatistics.Domain.Publication.Entity
 {
     public class PublicationAuthors
     {
-        public Publication Publication { get; set; }
+        public string Name { get; set; }
 
         public int NumberOfViews { get; set; }
 

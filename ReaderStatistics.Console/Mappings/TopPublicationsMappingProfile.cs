@@ -12,7 +12,7 @@ namespace ReaderStatistics.Console.Mappings
             this.CreateMap<Domain.Publication.Entity.PublicationAuthors, PublicationAuthors>().ConvertUsing(
                 entity => new PublicationAuthors
                           {
-                              Name = entity.Publication.Name,
+                              Name = entity.Name,
                               NumberOfViews = entity.NumberOfViews,
                               Authors = $"[{string.Join(", ", entity.Authors.Select(a => $"{a.FirstName} {a.LastName}"))}]"
                           });
