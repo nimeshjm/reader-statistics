@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReaderStatistics.Persistenc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReaderStatistics.Console", "ReaderStatistics.Console\ReaderStatistics.Console.csproj", "{15568633-ED4F-4297-8D28-282723F669A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReaderStatistic.Persistence.Tests", "ReaderStatistic.Persistence.Tests\ReaderStatistic.Persistence.Tests.csproj", "{473EECE7-7CBF-4864-AC21-A6566066611D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{15568633-ED4F-4297-8D28-282723F669A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15568633-ED4F-4297-8D28-282723F669A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15568633-ED4F-4297-8D28-282723F669A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{473EECE7-7CBF-4864-AC21-A6566066611D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{473EECE7-7CBF-4864-AC21-A6566066611D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{473EECE7-7CBF-4864-AC21-A6566066611D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{473EECE7-7CBF-4864-AC21-A6566066611D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -28,7 +28,6 @@ namespace ReaderStatistics.Persistence.Mappings
             }
 
             return authors;
-
         }
     }
 }
