@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{74A2965E-BA87-4F56-9A1F-2E64ED25EAC1}</ProjectGuid>
+    <ProjectGuid>{88D5C296-AAF3-4442-B441-29EA7FA73EE9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ReaderStatistics.Domain</RootNamespace>
-    <AssemblyName>ReaderStatistics.Domain</AssemblyName>
+    <RootNamespace>ReaderStatistics.Persistence</RootNamespace>
+    <AssemblyName>ReaderStatistics.Persistence</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CsvHelper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.2.16.3.0\lib\net45\CsvHelper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,21 +44,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Shared\AccessLog.cs" />
-    <Compile Include="Publication\Entity\Author.cs" />
-    <Compile Include="Shared\Entity.cs" />
-    <Compile Include="Repositories\IAccessLogRepository.cs" />
-    <Compile Include="Repositories\IRepository.cs" />
-    <Compile Include="Publication\Entity\Publication.cs" />
-    <Compile Include="Publication\Entity\PublicationAuthors.cs" />
-    <Compile Include="Publication\PublicationService.cs" />
+    <Compile Include="Mappings\AccessLogClassMap.cs" />
+    <Compile Include="Mappings\UsersClassMap.cs" />
+    <Compile Include="Repositories\AccessLogSequentialFileReadRepository.cs" />
+    <Compile Include="Repositories\AuthorMemoryRepository.cs" />
+    <Compile Include="Mappings\AuthorsClassMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Shared\Person.cs" />
-    <Compile Include="User\Entity\UserAccess.cs" />
-    <Compile Include="User\Entity\User.cs" />
-    <Compile Include="User\UserService.cs" />
+    <Compile Include="Mappings\PublicationsClassMap.cs" />
+    <Compile Include="Repositories\PublicationMemoryRepository.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ReaderStatistics.Domain\ReaderStatistics.Domain.csproj">
+      <Project>{74A2965E-BA87-4F56-9A1F-2E64ED25EAC1}</Project>
+      <Name>ReaderStatistics.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

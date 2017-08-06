@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{74A2965E-BA87-4F56-9A1F-2E64ED25EAC1}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{15568633-ED4F-4297-8D28-282723F669A6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ReaderStatistics.Domain</RootNamespace>
-    <AssemblyName>ReaderStatistics.Domain</AssemblyName>
+    <RootNamespace>ReaderStatistics.Console</RootNamespace>
+    <AssemblyName>ReaderStatistics.Console</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -30,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,19 +47,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Shared\AccessLog.cs" />
-    <Compile Include="Publication\Entity\Author.cs" />
-    <Compile Include="Shared\Entity.cs" />
-    <Compile Include="Repositories\IAccessLogRepository.cs" />
-    <Compile Include="Repositories\IRepository.cs" />
-    <Compile Include="Publication\Entity\Publication.cs" />
-    <Compile Include="Publication\Entity\PublicationAuthors.cs" />
-    <Compile Include="Publication\PublicationService.cs" />
+    <Compile Include="Mappings\TopPublicationsMappingProfile.cs" />
+    <Compile Include="Mappings\TopUsersMappingProfile.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Shared\Person.cs" />
-    <Compile Include="User\Entity\UserAccess.cs" />
-    <Compile Include="User\Entity\User.cs" />
-    <Compile Include="User\UserService.cs" />
+    <Compile Include="ViewModels\PublicationAuthors.cs" />
+    <Compile Include="ViewModels\UserAccess.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ReaderStatistics.Domain\ReaderStatistics.Domain.csproj">
+      <Project>{74A2965E-BA87-4F56-9A1F-2E64ED25EAC1}</Project>
+      <Name>ReaderStatistics.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReaderStatistics.Persistence\ReaderStatistics.Persistence.csproj">
+      <Project>{88D5C296-AAF3-4442-B441-29EA7FA73EE9}</Project>
+      <Name>ReaderStatistics.Persistence</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
