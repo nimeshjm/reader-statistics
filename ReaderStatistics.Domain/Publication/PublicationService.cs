@@ -22,9 +22,11 @@ namespace ReaderStatistics.Domain.Publication
 
         public IEnumerable<PublicationAuthors> FindTopPublicationsByViews()
         {
-            var list = this._accessLogRepository
+            var groupBy = this._accessLogRepository
                 .Read()
-                .GroupBy(a => a.PublicationId)
+                .GroupBy(a => a.PublicationId);
+
+            var list = groupBy
                 .OrderByDescending(p => p.Count())
                 .Take(10)
                 .Select(a =>
