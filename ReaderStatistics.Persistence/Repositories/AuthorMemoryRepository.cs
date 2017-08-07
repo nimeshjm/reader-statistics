@@ -5,7 +5,6 @@ using System.Linq;
 using CsvHelper;
 using ReaderStatistics.Domain.Publication.Entity;
 using ReaderStatistics.Domain.Repositories;
-using ReaderStatistics.Domain.User.Entity;
 using ReaderStatistics.Persistence.Mappings;
 
 namespace ReaderStatistics.Persistence.Repositories
@@ -16,7 +15,7 @@ namespace ReaderStatistics.Persistence.Repositories
 
         public AuthorMemoryRepository()
         {
-            using (var streamReader = File.OpenText("C:\\projects\\somo-test\\reader-stats\\ReaderStatistics.Domain\\db\\authors.csv"))
+            using (var streamReader = File.OpenText("authors.csv"))
             {
                 using (var csv = new CsvReader(streamReader))
                 {
@@ -34,32 +33,4 @@ namespace ReaderStatistics.Persistence.Repositories
             return this.authors[id];
         }
     }
-
-
-
-    public class UserMemoryRepository : IRepository<User>
-    {
-        private readonly Dictionary<Guid, User> users;
-
-        public UserMemoryRepository()
-        {
-            using (var streamReader = File.OpenText("users.csv"))
-            {
-                using (var csv = new CsvReader(streamReader))
-                {
-                    csv.Configuration.RegisterClassMap<UsersClassMap>();
-
-                    this.users = csv.GetRecords<User>().ToDictionary(
-                        a => a.Id,
-                        a => new User { Id = a.Id, FirstName = a.FirstName, LastName = a.LastName, CompanyId = a.CompanyId });
-                }
-            }
-        }
-
-        public User GetById(Guid id)
-        {
-            return this.users[id];
-        }
-    }
-
 }

@@ -7,8 +7,8 @@
     <ProjectGuid>{473EECE7-7CBF-4864-AC21-A6566066611D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ReaderStatistic.Persistence.Tests</RootNamespace>
-    <AssemblyName>ReaderStatistic.Persistence.Tests</AssemblyName>
+    <RootNamespace>ReaderStatistics.Persistence.Tests</RootNamespace>
+    <AssemblyName>ReaderStatistics.Persistence.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -1,8 +1,6 @@
-﻿using System.Linq;
-using NUnit.Framework;
-using ReaderStatistics.Persistence.Mappings;
+﻿using ReaderStatistics.Persistence.Mappings;
 
-namespace ReaderStatistic.Persistence.Tests
+namespace ReaderStatistics.Persistence.Tests
 {
     [TestFixture]
     public class AccessLogClassMapTests

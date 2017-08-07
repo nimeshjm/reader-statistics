@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReaderStatistics.Persistenc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReaderStatistics.Console", "ReaderStatistics.Console\ReaderStatistics.Console.csproj", "{15568633-ED4F-4297-8D28-282723F669A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReaderStatistic.Persistence.Tests", "ReaderStatistic.Persistence.Tests\ReaderStatistic.Persistence.Tests.csproj", "{473EECE7-7CBF-4864-AC21-A6566066611D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReaderStatistics.Persistence.Tests", "ReaderStatistic.Persistence.Tests\ReaderStatistics.Persistence.Tests.csproj", "{473EECE7-7CBF-4864-AC21-A6566066611D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReaderStatistics.Console.Tests", "ReaderStatistics.Console.Tests\ReaderStatistics.Console.Tests.csproj", "{4DD82E57-C9BC-4E01-AA14-A4930B992008}"
 EndProject

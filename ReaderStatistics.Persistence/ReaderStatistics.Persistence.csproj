@@ -52,15 +52,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Mappings\PublicationsClassMap.cs" />
     <Compile Include="Repositories\PublicationMemoryRepository.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <Compile Include="Repositories\UserMemoryRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ReaderStatistics.Domain\ReaderStatistics.Domain.csproj">
       <Project>{74A2965E-BA87-4F56-9A1F-2E64ED25EAC1}</Project>
       <Name>ReaderStatistics.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
