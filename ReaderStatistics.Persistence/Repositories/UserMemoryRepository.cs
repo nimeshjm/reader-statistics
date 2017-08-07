@@ -15,7 +15,7 @@ namespace ReaderStatistics.Persistence.Repositories
 
         public UserMemoryRepository()
         {
-            using (var streamReader = File.OpenText("users.csv"))
+            using (var streamReader = File.OpenText("db\\users.csv"))
             {
                 using (var csv = new CsvReader(streamReader))
                 {

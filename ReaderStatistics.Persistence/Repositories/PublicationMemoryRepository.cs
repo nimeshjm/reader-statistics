@@ -15,7 +15,7 @@ namespace ReaderStatistics.Persistence.Repositories
 
         public PublicationMemoryRepository()
         {
-            using (var streamReader = File.OpenText("publications.csv"))
+            using (var streamReader = File.OpenText("db\\publications.csv"))
             {
                 using (var csv = new CsvReader(streamReader))
                 {
