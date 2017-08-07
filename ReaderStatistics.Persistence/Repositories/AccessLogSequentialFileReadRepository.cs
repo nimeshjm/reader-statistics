@@ -16,7 +16,7 @@ namespace ReaderStatistics.Persistence.Repositories
 
         public AccessLogSequentialFileReadRepository()
         {
-            this.streamReader = File.OpenText("C:\\projects\\somo-test\\reader-stats\\ReaderStatistics.Domain\\db\\readershipStats.csv");
+            this.streamReader = File.OpenText("readershipStats.csv");
             this.csv = new CsvReader(this.streamReader);
             this.csv.Configuration.RegisterClassMap<AccessLogClassMap>();
         }

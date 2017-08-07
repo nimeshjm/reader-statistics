@@ -43,7 +43,7 @@ namespace ReaderStatistics.Persistence.Repositories
 
         public UserMemoryRepository()
         {
-            using (var streamReader = File.OpenText("C:\\projects\\somo-test\\reader-stats\\ReaderStatistics.Domain\\db\\users.csv"))
+            using (var streamReader = File.OpenText("users.csv"))
             {
                 using (var csv = new CsvReader(streamReader))
                 {

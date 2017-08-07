@@ -1,8 +1,5 @@
-using System;
 using System.Linq;
-using System.Linq.Expressions;
 using NUnit.Framework;
-using ReaderStatistics.Domain.Publication.Entity;
 using ReaderStatistics.Persistence.Mappings;
 
 namespace ReaderStatistic.Persistence.Tests

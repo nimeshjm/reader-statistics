@@ -15,7 +15,7 @@ namespace ReaderStatistics.Persistence.Repositories
 
         public PublicationMemoryRepository()
         {
-            using (var streamReader = File.OpenText("C:\\projects\\somo-test\\reader-stats\\ReaderStatistics.Domain\\db\\publications.csv"))
+            using (var streamReader = File.OpenText("publications.csv"))
             {
                 using (var csv = new CsvReader(streamReader))
                 {
