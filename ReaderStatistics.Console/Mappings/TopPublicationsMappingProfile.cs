@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using AutoMapper;
 using ReaderStatistics.Console.ViewModels;
-using ReaderStatistics.Domain.User.Entity;
 
 namespace ReaderStatistics.Console.Mappings
 {

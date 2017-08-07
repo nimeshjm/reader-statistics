@@ -7,7 +7,7 @@ namespace ReaderStatistics.Console.Mappings
         public TopUsersMappingProfile()
         {
             this.CreateMap<Domain.User.Entity.UserAccess, ViewModels.UserAccess>().ConvertUsing(
-                entity => new ViewModels.UserAccess()
+                entity => new ViewModels.UserAccess
                               {
                                   Name = $"{entity.User.FirstName} {entity.User.LastName}",
                                   NumberOfViews = entity.NumberOfViews,
