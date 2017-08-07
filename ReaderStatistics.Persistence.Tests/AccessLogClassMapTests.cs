@@ -1,4 +1,6 @@
-﻿using ReaderStatistics.Persistence.Mappings;
+﻿using System.Linq;
+using NUnit.Framework;
+using ReaderStatistics.Persistence.Mappings;
 
 namespace ReaderStatistics.Persistence.Tests
 {
